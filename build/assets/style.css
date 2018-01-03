@@ -66,10 +66,6 @@ body {
   .side-nav__title {
     color: #faf9f9;
     font-size: 1.7rem; }
-  .side-nav__item__item--active .side-nav__icon {
-    fill: #e27689; }
-  .side-nav__item__item--active span {
-    color: #faf9f9; }
 
 .social-icons {
   -webkit-align-self: center;

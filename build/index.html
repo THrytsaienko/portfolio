@@ -24,7 +24,7 @@
                             <h2 class="side-nav__text">Frontend Developer</h2>
                         </div>
                     </li>
-                    <li class="side-nav__item side-nav__item--active">
+                    <li class="side-nav__item">
                         <a href="#intro" id="intro-link" class="side-nav__link">
                             <svg class="side-nav__icon">
                                 <use xlink:href="assets/images/sprite.svg#icon-home"></use>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="content">
-            <section id="intro">
+            <section id="intro" data-maching-link="#intro-link" class="page-section">
                 <div class="introduction">
                     <div class="introduction__desc">
                         <p class="introduction__title">Hi! My name is
@@ -70,11 +70,50 @@
                 </div>
             </section>
 
-            <section id="about">
+            <section id="about" data-maching-link="#about-link" class="page-section">
+                <div class="container">
 
+                    <header>
+                        <h2>About Me</h2>
+                    </header>
+
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+                    <a href="#" class="image featured">
+                        <img src="assets/images/avatar.jpg" alt="" />
+                    </a>
+
+                    <p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus ultricies curae quis et rhoncus
+                        velit. Lobortis elementum aliquet nec vitae laoreet eget cubilia quam non etiam odio tincidunt montes.
+                        Elementum sem parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper dolor.
+                        Libero rutrum ut lacinia donec curae mus vel quisque sociis nec ornare iaculis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic culpa earum vel at? Odit sunt consequatur
+                        ratione soluta expedita ducimus nihil alias quibusdam vero maiores nostrum numquam voluptatem voluptates,
+                        at voluptatum sit exercitationem enim quisquam repellendus et nobis aspernatur facere. Voluptates
+                        ea consequuntur numquam optio, deserunt harum adipisci fugit itaque libero nam nesciunt, sit molestias?</p>
+                </div>
             </section>
 
-            <section id="portfolio">
+            <section id="portfolio" data-maching-link="#portfolio-link" class="page-section">
                 <div class="portfolio">
 
                     <header>
@@ -146,6 +185,7 @@
             </section>
         </div>
     </div>
+    <script src="assets/App.js"></script>
 </body>
 
 </html>

@@ -29,14 +29,14 @@
         color: $color-grey-light-1;
         font-size: 1.7rem;
     }
-    &__item__item--active {
-        .side-nav__icon {
-            fill: $color-active-icon;
-        }
-        span {
-            color: $color-grey-light-1;
-        }
-    }
+    // &__item__item--active {
+    //     .side-nav__icon {
+    //         fill: $color-active-icon;
+    //     }
+    //     span {
+    //         color: $color-grey-light-1;
+    //     }
+    // }
 }
 
 .social-icons {
