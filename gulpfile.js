@@ -1,0 +1,83 @@
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var browserSync = require('browser-sync').create();
+var del = require('del');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var processors = [
+    autoprefixer({
+        browsers: ['last 10 version']
+    })
+];
+
+gulp.task('html', function () {
+    return gulp.src('src/*.html')
+        .pipe(gulp.dest('build'))
+});
+
+gulp.task('css', function () {
+    return gulp.src('src/assets/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(processors))
+        .pipe(rename('style.css'))
+        .pipe(gulp.dest('build/assets'))
+        .pipe(browserSync.stream())
+});
+
+gulp.task('serve', function () {
+    browserSync.init({
+        server: {
+            baseDir: "./build"
+        }
+    });
+});
+
+var reload = function (done) {
+    browserSync.reload();
+    done();
+}
+
+gulp.task('watch', function () {
+    gulp.watch('src/**/*.html', gulp.series('html', reload));
+    gulp.watch('src/assets/sass/*.scss', gulp.series('css'));
+    // gulp.watch('src/**/*.js', gulp.series('js', reload));
+});
+
+gulp.task('copy', function () {
+    return gulp.src([
+            'src/**/*.{jpg,png,jpeg,gif,svg}'
+        ])
+        .pipe(gulp.dest('build'))
+});
+
+gulp.task('clean', function () {
+    return del('build');
+});
+
+gulp.task('build', gulp.parallel('css', 'html', 'copy'));
+gulp.task('start', gulp.parallel('watch', 'serve'));
+
+gulp.task('default', gulp.series('clean', 'build', 'start'));
+
+
+// gulp.task('js', function () {
+//     return gulp.src('src/assets/**/*.js')
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('build/assets'));
+// });
+
+// gulp.task('vendor:css', function () {
+//     return gulp.src('src/vendor/css/*.css')
+//         .pipe(concat('vendor.css'))
+//         .pipe(gulp.dest('build/assets'));
+// });
+
+// gulp.task('vendor:js', function () {
+//     return gulp.src('src/vendor/js/*.js')
+//         .pipe(concat('vendor.js'))
+//         .pipe(gulp.dest('build/assets'));
+// });
+
+// gulp.task('build', gulp.parallel('html', 'css', 'js', 'copy', 'vendor:css', 'vendor:js'));

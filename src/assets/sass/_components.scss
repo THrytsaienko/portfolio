@@ -1,0 +1,69 @@
+.side-nav {
+    color: $color-grey-dark-4;
+    &__item {
+        list-style: none;
+        &--active {
+            background: rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
+        }
+    }
+    &__item-logo {
+        padding: 2.3rem;
+    }
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 1.8rem;
+        padding: 2.3rem;
+        color: $color-grey-dark-4;
+    }
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $color-grey-dark-4;
+    }
+    &__title {
+        color: $color-grey-light-1;
+        font-size: 1.7rem;
+    }
+    &__item__item--active {
+        .side-nav__icon {
+            fill: $color-active-icon;
+        }
+        span {
+            color: $color-grey-light-1;
+        }
+    }
+}
+
+.social-icons {
+    align-self: center;
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $color-grey-dark-4;
+        margin: 2.3rem; 
+    }
+}
+
+//////INTODUCTION
+.introduction {
+    &__title,
+    &__text {
+        text-align: center;
+        color: #fff;
+        font-weight: 200;
+    }
+    &__title {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 5rem;
+    }
+    &__text {
+        font-size: 2.3rem;
+        line-height: 4rem;
+    }
+}
