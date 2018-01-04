@@ -67,3 +67,19 @@
         line-height: 4rem;
     }
 }
+
+///////ABOUT
+.about {
+    background-color: $color-grey-light-3;
+    &__header {
+        // background-color: $color-grey-light-2;
+        background-color: red;
+        &__title{
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: $color-grey-dark-4;
+            padding: 5rem 0 1rem 0;
+            text-align: center;
+        }
+    }
+}
