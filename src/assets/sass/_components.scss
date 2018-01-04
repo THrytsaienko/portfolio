@@ -28,8 +28,7 @@
     &__title {
         color: $color-grey-light-1;
         font-size: 1.7rem;
-    }
-    // &__item__item--active {
+    } // &__item__item--active {
     //     .side-nav__icon {
     //         fill: $color-active-icon;
     //     }
@@ -45,7 +44,7 @@
         width: 3rem;
         height: 3rem;
         fill: $color-grey-dark-4;
-        margin: 2.3rem; 
+        margin: 2.3rem;
     }
 }
 
@@ -71,15 +70,46 @@
 ///////ABOUT
 .about {
     background-color: $color-grey-light-3;
+    color: $color-grey-light-5;
+    ul {
+        list-style: none;
+    }
     &__header {
-        // background-color: $color-grey-light-2;
         background-color: red;
-        &__title{
+        &__title {
             font-size: 4.5rem;
             font-weight: 300;
             color: $color-grey-dark-4;
             padding: 5rem 0 1rem 0;
             text-align: center;
+        }
+    }
+    &__info {
+        justify-content: space-between;
+    }
+    &__objective,
+    &__edu,
+    &__exp,
+    &__skills,
+    &__courses {
+        font-size: 1.5rem;
+        margin: 5rem;
+    }
+    &__objective {
+        font-size: 1.5rem;
+        margin: 2rem 5rem 0 5rem;
+    }
+
+    &__edu__title,
+    &__exp__title,
+    &__skills__title,
+    &__courses__title,
+    &__objective__title {
+        align-items: center;
+        font-size: 1.6rem;
+        &::before,
+        &::after {
+            background-color: currentColor;
         }
     }
 }
