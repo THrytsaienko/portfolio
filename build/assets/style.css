@@ -134,6 +134,10 @@ body {
     -webkit-transform: translateY(0.3rem);
         -ms-transform: translateY(0.3rem);
             transform: translateY(0.3rem); }
+  .about__skills__item span {
+    font-weight: 700; }
+  .about__courses__item span {
+    font-style: italic; }
 
 .portfolio {
   background-color: #eff4f4;
@@ -157,6 +161,14 @@ body {
     -webkit-transform: translateY(0.7rem);
         -ms-transform: translateY(0.7rem);
             transform: translateY(0.7rem); }
+  .portfolio__cards__item {
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s; }
+    .portfolio__cards__item:hover {
+      -webkit-transform: translateY(-1.2rem) scale(1.03);
+          -ms-transform: translateY(-1.2rem) scale(1.03);
+              transform: translateY(-1.2rem) scale(1.03); }
   .portfolio__cards__img, .portfolio__cards__title {
     -webkit-box-shadow: 0.7rem 0.7rem 0.6rem 0 rgba(0, 0, 0, 0.05);
             box-shadow: 0.7rem 0.7rem 0.6rem 0 rgba(0, 0, 0, 0.05); }
