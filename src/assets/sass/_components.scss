@@ -99,7 +99,6 @@
         font-size: 1.5rem;
         margin: 2rem 5rem 0 5rem;
     }
-
     &__edu__title,
     &__exp__title,
     &__skills__title,
@@ -110,6 +109,16 @@
         &::before,
         &::after {
             background-color: currentColor;
+        }
+    }
+}
+
+.portfolio {
+    background-color: $color-grey-light-4;
+    &__header {
+        &__icon {
+            width: 2rem;
+            height: 2rem;
         }
     }
 }
