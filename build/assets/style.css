@@ -29,6 +29,12 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -77,19 +83,23 @@ body {
     fill: #999;
     margin: 2.3rem; }
 
-.introduction__title, .introduction__text {
-  text-align: center;
-  color: #fff;
-  font-weight: 200; }
-
-.introduction__title {
-  width: 70%;
-  margin: 0 auto;
-  font-size: 5rem; }
-
-.introduction__text {
-  font-size: 2.3rem;
-  line-height: 4rem; }
+.introduction {
+  background-image: url("images/banner.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%); }
+  .introduction__title, .introduction__text {
+    text-align: center;
+    color: #fff;
+    font-weight: 200; }
+  .introduction__title {
+    margin: 0 auto;
+    font-size: 5rem; }
+  .introduction__text {
+    font-size: 2.3rem;
+    line-height: 4rem; }
 
 .about {
   background-color: #eff;
@@ -203,7 +213,7 @@ body {
   z-index: 10;
   background-color: #101d2c;
   height: 100vh;
-  width: 20vw;
+  width: 23vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -248,20 +258,17 @@ body {
             justify-content: space-between; }
 
 .content {
-  margin-left: 20vw; }
+  margin-left: 23vw; }
 
 .introduction {
   height: 90vh;
-  background-image: url("images/banner.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%); }
+  position: relative; }
   .introduction__desc {
-    -webkit-transform: translateY(40%);
-        -ms-transform: translateY(40%);
-            transform: translateY(40%); }
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-align: center;
+    width: 80%; }
 
 .about__pictures {
   height: 50vh;
@@ -302,7 +309,20 @@ body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.row--1 {
+  -webkit-flex-basis: 42%;
+      -ms-flex-preferred-size: 42%;
+          flex-basis: 42%; }
+
+.row--2 {
+  -webkit-flex-basis: 58%;
+      -ms-flex-preferred-size: 58%;
+          flex-basis: 58%; }
 
 .portfolio__cards {
   display: grid;

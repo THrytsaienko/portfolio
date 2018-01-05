@@ -22,7 +22,6 @@ $line: 1px solid $color-grey-light-2;
 // $bp-medium: 56.25em; // 900px
 // $bp-small: 37.5em; // 600px
 // $bp-smallest: 31.25em; // 500px
-
 // MEDIA QUERY MANAGER
 
 /*
@@ -75,7 +74,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
         ; //1100px
     }
     @if $breakpoint==desktop {
-        @media only screen and (min-width: 75em) {
+        @media only screen and (max-width: 75em) {
             @content
         }
         ; //1200
@@ -87,9 +86,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
         ; //1400
     }
 }
-
-
-
 
 * {
     margin: 0;
@@ -105,6 +101,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+    @include respond(desktop) {
+        font-size: 60%;
+    }
+    @include respond(tab-land) {
+        font-size: 45%;
+    }
 }
 
 body {
@@ -117,4 +119,3 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-

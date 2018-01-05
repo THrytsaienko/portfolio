@@ -50,6 +50,13 @@
 
 //////INTODUCTION
 .introduction {
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    @include respond(big-desktop) {
+
+    }
     &__title,
     &__text {
         text-align: center;
@@ -57,7 +64,7 @@
         font-weight: 200;
     }
     &__title {
-        width: 70%;
+        // width: 85%;
         margin: 0 auto;
         font-size: 5rem;
     }
