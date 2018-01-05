@@ -71,6 +71,7 @@
 .about {
     background-color: $color-grey-light-3;
     color: $color-grey-light-5;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
     ul {
         list-style: none;
     }
@@ -112,10 +113,22 @@
             background-color: currentColor;
         }
     }
+    &__edu__icon,
+    &__exp__icon,
+    &__skills__icon,
+    &__courses__icon,
+        &__objective__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: $color-brown-dark-1;
+        margin-right: .8rem;
+        transform: translateY(.3rem);
+    }
 }
 
 .portfolio {
     background-color: $color-grey-light-4;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
     &__header {
         &__title {
             font-size: 4.5rem;
@@ -151,5 +164,17 @@
             text-align: center;
             font-weight: 400;
         }
+    }
+}
+
+////// FOOTER
+.footer {
+    &__text {
+        background-color: $color-grey-light-6;
+        color: $color-grey-dark-4;
+        font-size: 2rem;
+        padding: 6rem;
+        text-align: center;
+        font-weight: 300;
     }
 }

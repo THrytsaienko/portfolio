@@ -93,7 +93,9 @@ body {
 
 .about {
   background-color: #eff;
-  color: #999; }
+  color: #999;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05); }
   .about ul {
     list-style: none; }
   .about__header {
@@ -124,9 +126,19 @@ body {
     font-size: 1.6rem; }
     .about__edu__title::before, .about__edu__title::after, .about__exp__title::before, .about__exp__title::after, .about__skills__title::before, .about__skills__title::after, .about__courses__title::before, .about__courses__title::after, .about__objective__title::before, .about__objective__title::after {
       background-color: currentColor; }
+  .about__edu__icon, .about__exp__icon, .about__skills__icon, .about__courses__icon, .about__objective__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #54483A;
+    margin-right: .8rem;
+    -webkit-transform: translateY(0.3rem);
+        -ms-transform: translateY(0.3rem);
+            transform: translateY(0.3rem); }
 
 .portfolio {
-  background-color: #eff4f4; }
+  background-color: #eff4f4;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05); }
   .portfolio__header__title {
     font-size: 4.5rem;
     font-weight: 300;
@@ -156,6 +168,14 @@ body {
     color: #999;
     text-align: center;
     font-weight: 400; }
+
+.footer__text {
+  background-color: #dce3e2;
+  color: #999;
+  font-size: 2rem;
+  padding: 6rem;
+  text-align: center;
+  font-weight: 300; }
 
 .main-container {
   position: relative;
@@ -276,8 +296,9 @@ body {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
-  padding: 3rem; }
+  grid-gap: 4rem;
+  padding: 4rem;
+  padding-bottom: 10rem; }
   .portfolio__cards > * {
     width: 100%; }
   .portfolio__cards__item--1 {
