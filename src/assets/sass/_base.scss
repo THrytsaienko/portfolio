@@ -45,7 +45,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 // $bp-xxl: 87.5em; // 1400/16px=75em  1200px
 // $bp-xl: 75em; // 1200/16px=75em  1200px
 // $bp-large: 68.75em; // 1100px
-// $bp-medium: 56.25em; // 900px
+// $bp-medium: 62.5em; // 1000px
 // $bp-small: 37.5em; // 600px
 // $bp-smallest: 31.25em; // 500px
 @mixin respond($breakpoint) {
@@ -56,10 +56,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
         ; //500px
     }
     @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 40.625em) {
             @content
         }
-        ; //600px
+        ; //650px
     }
     @if $breakpoint==tab-port {
         @media only screen and (max-width: 56.25em) {
@@ -67,7 +67,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
         }
         ; //900px
     }
-    @if $breakpoint==tab-land {
+    @if $breakpoint==tab-land-smaller {
+        @media only screen and (max-width: 62.5em) {
+            @content
+        }
+        ; //1000px
+    }
+    @if $breakpoint==tab-land-biger {
         @media only screen and (max-width: 68.75em) {
             @content
         }
@@ -104,8 +110,17 @@ html {
     @include respond(desktop) {
         font-size: 55%; // 1200
     }
-    @include respond(tab-land) {
-        font-size: 45%; //1100
+    @include respond(tab-land-biger) {
+        font-size: 50%; //1100
+    }
+    @include respond(tab-land-smaller) {
+        font-size: 45%; //1000
+    }
+    @include respond(tab-port) {
+        font-size: 43%; //900
+    }
+    @include respond(phone) {
+        font-size: 40%; //650
     }
 }
 

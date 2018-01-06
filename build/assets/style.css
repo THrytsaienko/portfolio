@@ -34,7 +34,16 @@ html {
       font-size: 55%; } }
   @media only screen and (max-width: 68.75em) {
     html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
       font-size: 45%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 43%; } }
+  @media only screen and (max-width: 40.625em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -60,11 +69,19 @@ body {
   .side-nav__logo {
     width: 5rem;
     height: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__logo {
+        margin-bottom: 1.5rem; } }
+  .side-nav__desc {
+    text-align: right; }
   .side-nav__link {
     text-decoration: none;
     font-size: 1.8rem;
     padding: 2.3rem;
     color: #999; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link svg {
+        margin-left: 2rem; } }
   .side-nav__icon {
     width: 3rem;
     height: 3rem;
@@ -82,6 +99,11 @@ body {
     height: 3rem;
     fill: #999;
     margin: 2.3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .social-icons {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
 
 .introduction {
   background-image: url("images/banner.jpg");
@@ -97,6 +119,18 @@ body {
   .introduction__title {
     margin: 0 auto;
     font-size: 5rem; }
+    @media only screen and (max-width: 68.75em) {
+      .introduction__title {
+        font-size: 4.8rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .introduction__title {
+        font-size: 4.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .introduction__title {
+        font-size: 4.2rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .introduction__title {
+        font-size: 3.8rem; } }
   .introduction__text {
     font-size: 2.3rem;
     line-height: 4rem; }
@@ -114,9 +148,22 @@ body {
     color: #999;
     padding: 5rem 0 1rem 0;
     text-align: center; }
+    @media only screen and (max-width: 68.75em) {
+      .about__header__title {
+        padding-top: 4rem;
+        font-size: 4.2rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .about__header__title {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .about__header__title {
+        font-size: 3.8rem; } }
   .about__objective, .about__edu, .about__exp, .about__skills, .about__courses {
     font-size: 1.5rem;
     margin: 3rem; }
+    @media only screen and (max-width: 40.625em) {
+      .about__objective, .about__edu, .about__exp, .about__skills, .about__courses {
+        margin: 2.5rem 3rem; } }
   .about__objective {
     font-size: 1.5rem;
     margin: 2rem 3rem 0 3rem;
@@ -146,22 +193,43 @@ body {
   background-color: #eff4f4;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
-  padding: 4rem 3rem 10rem 3rem; }
-  @media only screen and (max-width: 75em) {
+  padding: 0 3rem 7rem 3rem; }
+  @media only screen and (min-width: 87.5em) {
     .portfolio {
-      padding-bottom: 7rem;
-      padding-top: 2.5rem; } }
+      padding: 0 3rem 10rem 3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .portfolio {
+      padding-bottom: 5rem; } }
+  @media only screen and (max-width: 40.625em) {
+    .portfolio {
+      padding-bottom: 3.5rem; } }
   .portfolio__header__title {
     font-size: 4.5rem;
     font-weight: 300;
     color: #999;
     padding: 5rem 0 1rem 0;
     text-align: center; }
+    @media only screen and (max-width: 68.75em) {
+      .portfolio__header__title {
+        padding-top: 4rem;
+        font-size: 4.2rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .portfolio__header__title {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .portfolio__header__title {
+        font-size: 3.8rem; } }
   .portfolio__header__text {
     font-size: 2.5rem;
     color: #999;
     text-align: center;
-    margin-bottom: 2rem; }
+    margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .portfolio__header__text {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .portfolio__header__text {
+        font-size: 2rem; } }
   .portfolio__header__icon {
     width: 3rem;
     height: 3rem;
@@ -193,12 +261,18 @@ body {
   background-color: #dce3e2;
   color: #999;
   font-size: 2rem;
-  padding: 6rem;
+  padding: 4.5rem;
   text-align: center;
   font-weight: 300; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (min-width: 87.5em) {
     .footer__text {
-      padding: 4.5rem; } }
+      padding: 6rem; } }
+  @media only screen and (max-width: 68.75em) {
+    .footer__text {
+      padding: 3.5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .footer__text {
+      padding: 3rem; } }
 
 .main-container {
   position: relative;
@@ -248,6 +322,13 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item-logo {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .side-nav__link {
     display: -webkit-box;
     display: -webkit-flex;
@@ -257,6 +338,24 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+        .side-nav__link svg {
+          margin-left: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav__logo {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
 
 .content {
   margin-left: 23vw; }
@@ -270,6 +369,9 @@ body {
     left: 5%;
     text-align: center;
     width: 90%; }
+    @media only screen and (max-width: 40.625em) {
+      .introduction__desc {
+        top: 30%; } }
 
 .about__pictures {
   height: 50vh;
@@ -324,31 +426,61 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    @media only screen and (max-width: 40.625em) {
+      .about__info__row--1 {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
   .about__info__row--2 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    @media only screen and (max-width: 40.625em) {
+      .about__info__row--2 {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
 
 .about__edu {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%; }
+  @media only screen and (max-width: 40.625em) {
+    .about__edu {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
 
 .about__exp {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%; }
+  @media only screen and (max-width: 40.625em) {
+    .about__exp {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
 
 .about__skills {
   -webkit-flex-basis: 40%;
       -ms-flex-preferred-size: 40%;
           flex-basis: 40%; }
+  @media only screen and (max-width: 40.625em) {
+    .about__skills {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
 
 .about__courses {
   -webkit-flex-basis: 60%;
       -ms-flex-preferred-size: 60%;
           flex-basis: 60%; }
+  @media only screen and (max-width: 40.625em) {
+    .about__courses {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
 
 .portfolio__cards {
   display: grid;
