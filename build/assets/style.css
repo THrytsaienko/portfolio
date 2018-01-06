@@ -31,7 +31,7 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 60%; } }
+      font-size: 55%; } }
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 45%; } }
@@ -108,25 +108,18 @@ body {
           box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05); }
   .about ul {
     list-style: none; }
-  .about__header {
-    background-color: red; }
-    .about__header__title {
-      font-size: 4.5rem;
-      font-weight: 300;
-      color: #999;
-      padding: 5rem 0 1rem 0;
-      text-align: center; }
-  .about__info {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  .about__header__title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #999;
+    padding: 5rem 0 1rem 0;
+    text-align: center; }
   .about__objective, .about__edu, .about__exp, .about__skills, .about__courses {
     font-size: 1.5rem;
-    margin: 5rem; }
+    margin: 3rem; }
   .about__objective {
     font-size: 1.5rem;
-    margin: 2rem 5rem 0 5rem;
+    margin: 2rem 3rem 0 3rem;
     padding-bottom: 3rem; }
   .about__edu__title, .about__exp__title, .about__skills__title, .about__courses__title, .about__objective__title {
     -webkit-box-align: center;
@@ -152,7 +145,12 @@ body {
 .portfolio {
   background-color: #eff4f4;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05); }
+          box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+  padding: 4rem 3rem 10rem 3rem; }
+  @media only screen and (max-width: 75em) {
+    .portfolio {
+      padding-bottom: 7rem;
+      padding-top: 2.5rem; } }
   .portfolio__header__title {
     font-size: 4.5rem;
     font-weight: 300;
@@ -198,6 +196,9 @@ body {
   padding: 6rem;
   text-align: center;
   font-weight: 300; }
+  @media only screen and (max-width: 75em) {
+    .footer__text {
+      padding: 4.5rem; } }
 
 .main-container {
   position: relative;
@@ -265,18 +266,18 @@ body {
   position: relative; }
   .introduction__desc {
     position: absolute;
-    top: 30%;
-    left: 10%;
+    top: 25%;
+    left: 5%;
     text-align: center;
-    width: 80%; }
+    width: 90%; }
 
 .about__pictures {
   height: 50vh;
   display: grid;
   grid-template-rows: repeat(3, 20vh);
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2.5rem;
-  padding: 2.5rem; }
+  grid-gap: 3rem;
+  padding: 3rem; }
   .about__pictures > * {
     width: 100%; }
   .about__pictures__item--1 {
@@ -312,25 +313,48 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .about__info__row--1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .about__info__row--2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
 
-.row--1 {
-  -webkit-flex-basis: 42%;
-      -ms-flex-preferred-size: 42%;
-          flex-basis: 42%; }
+.about__edu {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
 
-.row--2 {
-  -webkit-flex-basis: 58%;
-      -ms-flex-preferred-size: 58%;
-          flex-basis: 58%; }
+.about__exp {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
+
+.about__skills {
+  -webkit-flex-basis: 40%;
+      -ms-flex-preferred-size: 40%;
+          flex-basis: 40%; }
+
+.about__courses {
+  -webkit-flex-basis: 60%;
+      -ms-flex-preferred-size: 60%;
+          flex-basis: 60%; }
 
 .portfolio__cards {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4rem;
-  padding: 4rem;
-  padding-bottom: 10rem; }
+  grid-gap: 4rem; }
   .portfolio__cards > * {
     width: 100%; }
   .portfolio__cards__item--1 {

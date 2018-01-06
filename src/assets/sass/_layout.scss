@@ -14,9 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include respond(big-desktop) {
-    
-    }
+    @include respond(big-desktop) {}
 }
 
 .side-nav {
@@ -38,15 +36,14 @@
 
 ///////INTRODUCTION SECTION
 .introduction {
-    height: 90vh; // background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
-    // url('images/4.jpg');
+    height: 90vh;
     position: relative;
     &__desc {
         position: absolute;
-        top: 30%;
-        left: 10%; // transform: translate(-50%, -50%);
+        top: 25%;
+        left: 5%;
         text-align: center;
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -58,8 +55,8 @@
         display: grid;
         grid-template-rows: repeat(3, 20vh);
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2.5rem;
-        padding: 2.5rem;
+        grid-gap: 3rem;
+        padding: 3rem;
         &>* {
             width: 100%;
         }
@@ -102,15 +99,26 @@
     &__info {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        &__row--1 {
+            display: flex;
+        }
+        &__row--2 {
+            display: flex;
+        }
     }
-}
-
-.row--1 {
-    flex-basis: 42%;
-}
-
-.row--2 {
-    flex-basis: 58%;
+    &__edu {
+        flex-basis: 50%;
+    }
+    &__exp {
+        flex-basis: 50%;
+    }
+    &__skills {
+        flex-basis: 40%;
+    }
+    &__courses {
+        flex-basis: 60%;
+    }
 }
 
 /////// PORTFOLIO
@@ -121,8 +129,6 @@
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 4rem;
-        padding: 4rem;
-        padding-bottom: 10rem;
         &>* {
             width: 100%;
         }
