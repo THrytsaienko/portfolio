@@ -267,3 +267,10 @@
         }
     }
 }
+
+#headerToggler {
+    display: none;
+    @include respond(phone) {
+        display: block;
+    }
+}
