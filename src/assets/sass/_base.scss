@@ -49,11 +49,17 @@ ORDER: Base + typography > general layout + grid > page layout > components
 // $bp-small: 37.5em; // 600px
 // $bp-smallest: 31.25em; // 500px
 @mixin respond($breakpoint) {
-    @if $breakpoint==small-phone {
-        @media only screen and (max-width: 31.25em) {
+    @if $breakpoint==super-small-phone {
+        @media only screen and (max-width: 25em) {
             @content
         }
-        ; //500px
+        ; //400px
+    }
+    @if $breakpoint==small-phone {
+        @media only screen and (max-width: 34.375em) {
+            @content
+        }
+        ; //550px
     }
     @if $breakpoint==phone {
         @media only screen and (max-width: 40.625em) {
@@ -121,6 +127,12 @@ html {
     }
     @include respond(phone) {
         font-size: 40%; //650
+    }
+    @include respond(small-phone) {
+        font-size: 35%; //550
+    }
+    @include respond(super-small-phone) {
+        font-size: 30%; //400
     }
 }
 

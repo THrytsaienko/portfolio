@@ -59,7 +59,7 @@ var reload = function (done) {
 gulp.task('watch', function () {
     gulp.watch('src/**/*.html', gulp.series('html', reload));
     gulp.watch('src/assets/sass/*.scss', gulp.series('css'));
-    gulp.watch('src/assets/js/*.js', gulp.series('js', reload));
+    gulp.watch('src/assets/js/**/*.js', gulp.series('js', reload));
 });
 
 gulp.task('copy', function () {

@@ -53,7 +53,8 @@ class NavScroll {
                         $(machingHeaderLink).addClass("side-nav__item--active");
                     }
                 },
-                offset: "18%"
+                // offset: "18%"
+                offset: "5%"
             });
 
             new Waypoint({
@@ -65,7 +66,7 @@ class NavScroll {
                         $(machingHeaderLink).addClass("side-nav__item--active");
                     }
                 },
-                offset: "-40%"
+                offset: "-60%"
             });
         });
     }

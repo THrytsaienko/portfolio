@@ -1,6 +1,31 @@
+#header {
+    @include respond(phone) {
+        transform: translateX(-23vw); // 650 mobile-menu
+    }
+}
+
+body.header-visible {
+    #header {
+        transform: translateX(0vw);
+    }
+    .content {
+        margin-left: 23vw;
+    }
+    .mobile-menu-icon{
+        transform: translateX(23vw);
+    }
+}
+
 .main-container {
     position: relative;
     display: flex;
+}
+
+.mobile-menu-icon {
+    display: none;
+    @include respond(phone) {
+        display: block; // 650 mobile-menu
+    }
 }
 
 .sidebar {
@@ -32,9 +57,6 @@
         @include respond(tab-port) {
             flex-direction: row-reverse; //900
             justify-content: flex-start;
-            & svg {
-                margin-left: 2rem;
-            }
         }
     }
     &__logo {
@@ -46,6 +68,9 @@
 
 .content {
     margin-left: 23vw;
+    @include respond(phone) {
+        margin-left: 0; // 650 mobile-menu
+    }
 }
 
 ///////INTRODUCTION SECTION
@@ -61,6 +86,9 @@
         @include respond(phone) {
             top: 30%; // 650
         }
+    }
+    @include respond(phone) {
+        height: 70vh; // 650 mobile-menu
     }
 }
 
@@ -167,7 +195,7 @@
         @include respond(phone) {
             grid-template-rows: repeat(5, min-content);
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem; // 650
+            grid-gap: 3rem; // 650
         }
         &>* {
             width: 100%;
@@ -251,21 +279,5 @@
             object-fit: cover;
             display: block;
         }
-    }
-}
-
-#headerToggler {
-    // display: none;
-    .toggle {
-        position: fixed;
-        width: 2rem;
-        color: yellowgreen;
-        height: .5rem;
-        top: 10rem;
-        left: 10rem;
-        background-color: $color-grey-dark-3;
-    }
-    @include respond(phone) {
-        //    display: block;
     }
 }

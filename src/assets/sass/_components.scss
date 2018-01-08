@@ -1,3 +1,47 @@
+.mobile-menu-icon {
+    width: 60px; // 650 mobile-menu
+    height: 46px;
+    position: fixed;
+    top: 3rem;
+    z-index: 10;
+    left: 3rem;
+    cursor: pointer;
+    background-color: rgba($color-grey-light-5, 0.5);
+    border-radius: .5rem;
+    &::before {
+        content: "";
+        top: 15px;
+        left: 20px;
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        background-color: #fff;
+        transform-origin: 0 0;
+        transition: transform .3s ease-out;
+    }
+    &__middle {
+        top: 22px;
+        left: 20px;
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        background-color: #fff;
+        transition: all .3s ease-out;
+        transform-origin: 0 50%;
+    }
+    &::after {
+        content: "";
+        top: 29px;
+        left: 20px;
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        background-color: #fff;
+        transform-origin: 0 100%;
+        transition: transform .3s ease-out;
+    }
+}
+
 .side-nav {
     color: $color-grey-dark-4;
     &__item {
@@ -25,28 +69,32 @@
         font-size: 1.8rem;
         padding: 2.3rem;
         color: $color-grey-dark-4;
-        @include respond(tab-port) {
-            & svg {
-                margin-left: 2rem; //900
-            }
-        }
     }
     &__icon {
         width: 3rem;
         height: 3rem;
         fill: $color-grey-dark-4;
+        @include respond(tab-port) {
+            margin-left: 2rem; //900
+        }
+        @include respond(super-small-phone) {
+            width: 2rem;
+            height: 2rem; //400
+            margin-left: 1rem;
+        }
     }
     &__title {
         color: $color-grey-light-1;
         font-size: 1.7rem;
-    } // &__item__item--active {
-    //     .side-nav__icon {
-    //         fill: $color-active-icon;
-    //     }
-    //     span {
-    //         color: $color-grey-light-1;
-    //     }
-    // }
+    }
+    &__item--active {
+        .side-nav__icon {
+            fill: $color-active-icon;
+        }
+        span {
+            color: $color-grey-light-1;
+        }
+    }
 }
 
 .social-icons {
@@ -264,6 +312,12 @@
         }
         @include respond(tab-land-smaller) {
             padding: 3rem; // 1000
+        }
+        @include respond(small-phone) {
+            padding: 2rem; // 550
+        }
+        @include respond(super-small-phone) {
+            padding: 1.5rem; // 400
         }
     }
 }
