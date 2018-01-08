@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import waypoint from "../../../../node_modules/waypoints/lib/noframework.waypoints";
 import smoothScroll from 'jquery-smooth-scroll';
+// import 'lazysizes';
 
 class NavScroll {
     constructor() {

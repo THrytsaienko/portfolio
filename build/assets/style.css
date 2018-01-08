@@ -46,7 +46,7 @@ html {
       font-size: 40%; } }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Serif Pro', serif;
   font-weight: 400;
   line-height: 1.6;
   color: #333;
@@ -274,12 +274,6 @@ body {
     .footer__text {
       padding: 3rem; } }
 
-#headerToggler {
-  display: none; }
-  @media only screen and (max-width: 40.625em) {
-    #headerToggler {
-      display: block; } }
-
 .main-container {
   position: relative;
   display: -webkit-box;
@@ -469,9 +463,9 @@ body {
               flex-basis: 100%; } }
 
 .about__skills {
-  -webkit-flex-basis: 40%;
-      -ms-flex-preferred-size: 40%;
-          flex-basis: 40%; }
+  -webkit-flex-basis: 45%;
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%; }
   @media only screen and (max-width: 40.625em) {
     .about__skills {
       -webkit-flex-basis: 100%;
@@ -479,9 +473,9 @@ body {
               flex-basis: 100%; } }
 
 .about__courses {
-  -webkit-flex-basis: 60%;
-      -ms-flex-preferred-size: 60%;
-          flex-basis: 60%; }
+  -webkit-flex-basis: 55%;
+      -ms-flex-preferred-size: 55%;
+          flex-basis: 55%; }
   @media only screen and (max-width: 40.625em) {
     .about__courses {
       -webkit-flex-basis: 100%;

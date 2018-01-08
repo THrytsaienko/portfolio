@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -76,13 +77,13 @@
                         <h2 class="about__header__title">About Me</h2>
                         <div class="about__pictures">
                             <figure class="about__pictures__item about__pictures__item--1">
-                                <img src="assets/images/1.jpg" alt="Image 1" class="about__pictures__img">
+                                <img data-srcset="assets/images/1.jpg" alt="Image 1" class="about__pictures__img lazyload">
                             </figure>
                             <figure class="about__pictures__item about__pictures__item--2">
-                                <img src="assets/images/4.jpg" alt="Image 2" class="about__pictures__img">
+                                <img data-srcset="assets/images/4.jpg" alt="Image 2" class="about__pictures__img lazyload">
                             </figure>
                             <figure class="about__pictures__item about__pictures__item--3">
-                                <img src="assets/images/5.jpg" alt="Image 3" class="about__pictures__img">
+                                <img data-srcset="assets/images/5.jpg" alt="Image 3" class="about__pictures__img lazyload">
                             </figure>
                         </div>
                     </header>
@@ -108,16 +109,16 @@
                                             <svg class="about__exp__icon">
                                                 <use xlink:href="assets/images/sprite.svg#icon-business_center">
                                                 </use>
-                                            </svg>1C-developer May 2016 – August 2017</h4>
-                                        <p class="about__exp__item__name">1С franchising company</p>
+                                            </svg>1C-developer</h4>
+                                        <p class="about__exp__item__name">Providing the automation services in the finance, logistics, trading fields</p>
                                     </li>
-                                    <li class="about__exp__item">
+                                    <!-- <li class="about__exp__item">
                                         <h4 class="about__exp__item__position">
                                             <svg class="about__exp__icon">
                                                 <use xlink:href="assets/images/sprite.svg#icon-business_center"></use>
                                             </svg>Economist November 2011 – April 2016</h4>
                                         <p class="about__exp__item__name">UKRSIBBANK BNP Paribas Group, Finance Department</p>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -131,15 +132,16 @@
                                             <use xlink:href="assets/images/sprite.svg#icon-build"></use>
                                         </svg>
                                         <span>Web Skills: </span>HTML
-                                        <sub>5</sub>, Pug (Jade), CSS
-                                        <sub>3</sub>, SASS, Stylus, Javascript (ES6), jQuery, Bootstrap 3/4. Web standarts and
-                                        cross-browser compatibility.
+                                        <sub>5</sub> (flexbox and CSS grids), Pug (Jade), CSS
+                                        <sub>3</sub>, SASS (mixins, variables, functions etc.), Stylus (mixins, variables, functions
+                                        etc.), Javascript (ES6), jQuery, Bootstrap 3/4, React (basics). Understanding and
+                                        using BEM methodology. Web standarts and accesibility, cross-browser compatibility.
                                     </li>
                                     <li class="about__skills__item">
                                         <svg class="about__skills__icon">
                                             <use xlink:href="assets/images/sprite.svg#icon-build"></use>
                                         </svg>
-                                        <span>Web Tools: </span>Gulp, WebPack, Git, GitHub.
+                                        <span>Web Tools: </span>Gulp, Webpack, Git, GitHub.
                                     </li>
                                 </ul>
                             </div>
@@ -160,47 +162,31 @@
                                             <use xlink:href="assets/images/sprite.svg#icon-check">
                                             </use>
                                         </svg>
-                                        Build Responsive Real World Websites With HTML5 and CSS3
-                                        <span>(Udemy)</span>
-                                    </li>
-                                    <li class="about__courses__item">
-                                        <svg class="about__courses__icon">
-                                            <use xlink:href="assets/images/sprite.svg#icon-check">
-                                            </use>
-                                        </svg>
-                                        Bootstrap 4 From Scratch With 5 Projects
-                                        <span>(Udemy)</span>
-                                    </li>
-                                    <li class="about__courses__item">
-                                        <svg class="about__courses__icon">
-                                            <use xlink:href="assets/images/sprite.svg#icon-check">
-                                            </use>
-                                        </svg>
-                                        Bootstrap 3
-                                        <span>(Udemy)</span>
-                                    </li>
-                                    <li class="about__courses__item">
-                                        <svg class="about__courses__icon">
-                                            <use xlink:href="assets/images/sprite.svg#icon-check">
-                                            </use>
-                                        </svg>
-                                        ES6 Javascript: The Complete Developer's Guide
-                                        <span>(Udemy)</span>
-                                    </li>
-                                    <li class="about__courses__item">
-                                        <svg class="about__courses__icon">
-                                            <use xlink:href="assets/images/sprite.svg#icon-check">
-                                            </use>
-                                        </svg>
-                                        Git a Web Developer Job: Mastering the Modern Workflow
-                                        <span>(Udemy)</span>
-                                    </li>
-                                    <li class="about__courses__item">
-                                        <svg class="about__courses__icon">
-                                            <use xlink:href="assets/images/sprite.svg#icon-check">
-                                            </use>
-                                        </svg>
                                         Advanced CSS and Sass
+                                        <span>(Udemy)</span>
+                                    </li>
+                                    <li class="about__courses__item">
+                                        <svg class="about__courses__icon">
+                                            <use xlink:href="assets/images/sprite.svg#icon-check">
+                                            </use>
+                                        </svg>
+                                        Bootstrap 3/4 From Scratch
+                                        <span>(Udemy)</span>
+                                    </li>
+                                    <li class="about__courses__item">
+                                        <svg class="about__courses__icon">
+                                            <use xlink:href="assets/images/sprite.svg#icon-check">
+                                            </use>
+                                        </svg>
+                                        ES6 Javascript
+                                        <span>(Udemy)</span>
+                                    </li>
+                                    <li class="about__courses__item">
+                                        <svg class="about__courses__icon">
+                                            <use xlink:href="assets/images/sprite.svg#icon-check">
+                                            </use>
+                                        </svg>
+                                        Best Practises Using Gulp and Webpack
                                         <span>(Udemy)</span>
                                     </li>
                                     <li class="about__courses__item">
@@ -249,7 +235,7 @@
 
                     <header class="portfolio__header">
                         <h2 class="portfolio__header__title">Portfolio</h2>
-                        <p class="portfolio__header__text">Here you can see some of mine works. You can also go to my Github page
+                        <p class="portfolio__header__text">Here you can see some of my works. You can also go to my Github page
                             <a class="portfolio__header__link" href="https://github.com/THrytsaienko" target="_blank">
                                 <svg class="portfolio__header__icon">
                                     <use xlink:href="assets/images/sprite.svg#icon-github"></use>
@@ -261,63 +247,63 @@
                     <div class="portfolio__cards">
                         <article class="portfolio__cards__item portfolio__cards__item--1">
                             <a href="http://10dances.com.ua/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/10dances.jpg" alt="10 dances" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/10dances.jpg" alt="10 dances" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Bous Dance Club</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--2">
                             <a href="https://thrytsaienko.github.io/glozzom/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/glozzom.jpg" alt="Glozzom" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/glozzom.jpg" alt="Glozzom" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Glozzom</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--3">
                             <a href="https://thrytsaienko.github.io/looplab/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/looplab.jpg" alt="LoopLAB" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/looplab.jpg" alt="LoopLAB" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">LoopLAB</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--4">
                             <a href="https://thrytsaienko.github.io/Nexter/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/nexter.jpg" alt="Nexter" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/nexter.jpg" alt="Nexter" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Nexter</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--5">
                             <a href="https://thrytsaienko.github.io/Ref-Repair/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/ref.jpg" alt="Refrigerators" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/ref.jpg" alt="Refrigerators" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Repair of Refrigerators</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--6">
                             <a href="https://thrytsaienko.github.io/mizuxe/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/mizuxe.jpg" alt="Mizuxe" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/mizuxe.jpg" alt="Mizuxe" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Mizuxe</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--7">
                             <a href="https://thrytsaienko.github.io/Natours/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/natours.jpg" alt="Natours" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/natours.jpg" alt="Natours" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Natours</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--8">
                             <a href="https://thrytsaienko.github.io/Udemy_Travel-site/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/travel.jpg" alt="Travel site" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/travel.jpg" alt="Travel site" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Travel Site</h3>
                         </article>
 
                         <article class="portfolio__cards__item portfolio__cards__item--9">
                             <a href="https://thrytsaienko.github.io/travelMuse/" class="portfolio__cards__link" target="_blank">
-                                <img src="assets/images/travelMuse.jpg" alt="Travel Muse" class="portfolio__cards__img">
+                                <img data-srcset="assets/images/travelMuse.jpg" alt="Travel Muse" class="portfolio__cards__img lazyload">
                             </a>
                             <h3 class="portfolio__cards__title">Travel Muse</h3>
                         </article>

@@ -143,13 +143,13 @@
         }
     }
     &__skills {
-        flex-basis: 40%;
+        flex-basis: 45%;
         @include respond(phone) {
             flex-basis: 100%; //650
         }
     }
     &__courses {
-        flex-basis: 60%;
+        flex-basis: 55%;
         @include respond(phone) {
             flex-basis: 100%; //650
         }
