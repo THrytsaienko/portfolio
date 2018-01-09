@@ -11107,11 +11107,7 @@ var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// new RevealOnScroll($(".feature-item"), "85%");
-// new RevealOnScroll($(".testimonial"), "60%");
-var navScroll = new _NavScroll2.default(); // import RevealOnScroll from './modules/RevealOnScroll';
-// import $ from 'jquery';
-
+var navScroll = new _NavScroll2.default();
 var lazyloadImages = new _LazyloadImages2.default();
 var mobileMenu = new _MobileMenu2.default();
 
@@ -11144,49 +11140,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// import 'lazysizes';
-
 var NavScroll = function () {
     function NavScroll() {
         _classCallCheck(this, NavScroll);
 
-        // this.lazyImages = $(".lazyload");
-        // this.siteHeader = $(".site-header");
-        // this.headerTriggerElement = $(".large-hero__title");
-        // this.createHeaderWaypoint();
         this.pageSections = (0, _jquery2.default)(".page-section");
         this.headerLinks = (0, _jquery2.default)(".side-nav a");
         this.createSectionPageWaypoints();
         this.addSmoothScrolling();
-        // this.refreshWaypoints();
     }
-
-    // refreshWaypoints() {
-    //     this.lazyImages.on('load', function () {
-    //         Waypoint.refreshAll();
-    //     });
-    // }
 
     _createClass(NavScroll, [{
         key: 'addSmoothScrolling',
         value: function addSmoothScrolling() {
             this.headerLinks.smoothScroll();
         }
-
-        // createHeaderWaypoint() {
-        //     var correctThis = this;
-        //     new Waypoint({
-        //         element: this.headerTriggerElement[0],
-        //         handler: function (direction) {
-        //             if (direction == "down") {
-        //                 correctThis.siteHeader.addClass("site-header--dark");
-        //             } else {
-        //                 correctThis.siteHeader.removeClass("site-header--dark");
-        //             }
-        //         }
-        //     });
-        // }
-
     }, {
         key: 'createSectionPageWaypoints',
         value: function createSectionPageWaypoints() {

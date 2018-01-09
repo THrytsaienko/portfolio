@@ -1,53 +1,27 @@
 $color-primary: #101d2c;
 $color-grey-light-1: #faf9f9;
-$color-grey-light-2: #f4f2f2;
+$color-grey-light-2: #dce3e2; //footer
 $color-grey-light-3: #eff; //about me #ebf0f0
 $color-grey-light-4: #eff4f4; //portfolio
 $color-grey-light-5: #999; //text color
-$color-grey-light-6: #dce3e2; //footer
-$color-grey-dark-1: #41484c;
-$color-grey-dark-2: #333;
-$color-grey-dark-3: #777;
-$color-grey-dark-4: #999;
+$color-grey-dark-1: #333;
 $color-brown-dark-1: #54483A;
-$color-brown-dark-2: #6D5D4B;
 $color-active-icon: #e27689;
-$color-active-span: #41484c;
-$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
-$shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
-$line: 1px solid $color-grey-light-2;
-// $bp-xxl: 87.5em; // 1400/16px=75em  1200px
-// $bp-xl: 75em; // 1200/16px=75em  1200px
-// $bp-large: 68.75em; // 1100px
-// $bp-medium: 56.25em; // 900px
-// $bp-small: 37.5em; // 600px
-// $bp-smallest: 31.25em; // 500px
-// MEDIA QUERY MANAGER
 
 /*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
 $breakpoint arguement choices:
+- super-small-phone
+- small-phone
 - phone
 - tab-port
-- tab-land
+- tab-land-smaller
+- tab-land-biger
+- desktop
 - big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
 
-// $bp-xxl: 87.5em; // 1400/16px=75em  1200px
-// $bp-xl: 75em; // 1200/16px=75em  1200px
-// $bp-large: 68.75em; // 1100px
-// $bp-medium: 62.5em; // 1000px
-// $bp-small: 37.5em; // 600px
-// $bp-smallest: 31.25em; // 500px
 @mixin respond($breakpoint) {
     @if $breakpoint==super-small-phone {
         @media only screen and (max-width: 25em) {
@@ -137,11 +111,10 @@ html {
 }
 
 body {
-    // font-family: 'Lato', sans-serif;
     font-family: 'Source Serif Pro', serif;
     font-weight: 400;
     line-height: 1.6;
-    color: $color-grey-dark-2;
+    color: $color-grey-dark-1;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
