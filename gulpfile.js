@@ -73,10 +73,10 @@ gulp.task('clean', function () {
     return del('docs');
 });
 
-gulp.task('docs', gulp.parallel('css', 'html', 'js', 'copy'));
+gulp.task('build', gulp.parallel('css', 'html', 'js', 'copy'));
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
-gulp.task('default', gulp.series('clean', 'docs', 'start'));
+gulp.task('default', gulp.series('clean', 'build', 'start'));
 
 
 
