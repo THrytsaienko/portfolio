@@ -46,6 +46,9 @@
     background-color: $color-primary;
     height: 100vh;
     width: 23vw;
+    @include respond(smallest) {
+        width: 26vw; //375
+    }
 }
 
 .side-nav {
@@ -87,6 +90,9 @@
             width: 2rem;
             height: 2rem; //400
             margin-left: 1rem;
+        }
+        @include respond(smallest) {
+            margin-left: .7rem; //375
         }
     }
     &__title {

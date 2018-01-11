@@ -10,6 +10,7 @@ $color-active-icon: #e27689;
 
 /*
 $breakpoint arguement choices:
+- smallest
 - super-small-phone
 - small-phone
 - phone
@@ -23,6 +24,12 @@ $breakpoint arguement choices:
 */
 
 @mixin respond($breakpoint) {
+    @if $breakpoint==smallest {
+        @media only screen and (max-width: 23.5em) {
+            @content
+        }
+        ; //375px
+    }
     @if $breakpoint==super-small-phone {
         @media only screen and (max-width: 25em) {
             @content
