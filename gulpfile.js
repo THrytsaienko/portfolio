@@ -7,6 +7,7 @@ var del = require('del');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var webpack = require('webpack');
+var gcmq = require('gulp-group-css-media-queries');
 var processors = [
     autoprefixer({
         browsers: ['last 10 version']
@@ -23,6 +24,7 @@ gulp.task('css', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename('style.css'))
+        .pipe(gcmq())
         .pipe(gulp.dest('docs/assets'))
         .pipe(browserSync.stream())
 });
