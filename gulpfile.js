@@ -29,12 +29,6 @@ gulp.task('css', function () {
         .pipe(browserSync.stream())
 });
 
-// gulp.task('js', function () {
-//     return gulp.src('src/assets/js/*.js')
-//         .pipe(concat('main.js'))
-//         .pipe(gulp.dest('docs/assets'));
-// });
-
 gulp.task('js', function (callback) {
     webpack(require('./webpack.config'), function (err, stats) {
         if (err) {
@@ -82,6 +76,12 @@ gulp.task('default', gulp.series('clean', 'build', 'start'));
 
 
 
+
+// gulp.task('js', function () {
+//     return gulp.src('src/assets/js/*.js')
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('docs/assets'));
+// });
 
 // gulp.task('vendor:css', function () {
 //     return gulp.src('src/vendor/css/*.css')
