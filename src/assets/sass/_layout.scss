@@ -60,7 +60,11 @@ body.header-visible {
         @include respond(tab-port) {
             flex-direction: row-reverse; //900
             justify-content: flex-start;
-        }
+		}
+		@include respond(small-phone) {
+			flex-direction: row-reverse; //550px
+			justify-content: space-between;
+		}
         @include respond(smallest) {
             margin-left: .7rem; //375
         }

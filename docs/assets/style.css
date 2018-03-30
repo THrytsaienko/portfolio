@@ -984,6 +984,18 @@ body.header-visible .mobile-menu-icon {
   .footer__text {
     padding: 2rem;
   }
+
+  .side-nav__link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 23.5em) {
