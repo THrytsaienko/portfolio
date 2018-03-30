@@ -363,6 +363,32 @@ body {
   font-weight: 300;
 }
 
+.footer p {
+  margin-bottom: 0;
+}
+
+.tooltip-inner {
+  background-color: #ff3333;
+  padding: 7px;
+  font-size: 13px;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: #ff3333 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+  border-left-color: #ff3333 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-bottom-color: #ff3333 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+  border-top-color: #ff3333 !important;
+}
+
 body.header-visible #header {
   -webkit-transform: translateX(0vw);
   -ms-transform: translateX(0vw);
@@ -817,14 +843,6 @@ body.header-visible .mobile-menu-icon {
 
   .about__header__title {
     font-size: 3.8rem;
-  }
-
-  .about__objective,
-  .about__edu,
-  .about__exp,
-  .about__skills,
-  .about__courses {
-    margin: 2.5rem 3rem;
   }
 
   .portfolio {
