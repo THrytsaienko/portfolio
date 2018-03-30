@@ -1,344 +1,366 @@
 .mobile-menu-icon {
-    width: 60px; // 650 mobile-menu
-    height: 46px;
-    position: fixed;
-    top: 3rem;
-    z-index: 10;
-    left: 3rem;
-    cursor: pointer;
-    background-color: rgba($color-grey-light-5, 0.5);
-    border-radius: .5rem;
-    &::before {
-        content: "";
-        top: 15px;
-        left: 20px;
-        width: 20px;
-        height: 2px;
-        position: absolute;
-        background-color: #fff;
-        transform-origin: 0 0;
-        transition: transform .3s ease-out;
-    }
-    &__middle {
-        top: 22px;
-        left: 20px;
-        width: 20px;
-        height: 2px;
-        position: absolute;
-        background-color: #fff;
-        transition: all .3s ease-out;
-        transform-origin: 0 50%;
-    }
-    &::after {
-        content: "";
-        top: 29px;
-        left: 20px;
-        width: 20px;
-        height: 2px;
-        position: absolute;
-        background-color: #fff;
-        transform-origin: 0 100%;
-        transition: transform .3s ease-out;
-    }
+	width: 60px; // 650 mobile-menu
+	height: 46px;
+	position: fixed;
+	top: 3rem;
+	z-index: 10;
+	left: 3rem;
+	cursor: pointer;
+	background-color: rgba($color-grey-light-5, 0.5);
+	border-radius: .5rem;
+	&::before {
+		content: "";
+		top: 15px;
+		left: 20px;
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		background-color: #fff;
+		transform-origin: 0 0;
+		transition: transform .3s ease-out;
+	}
+	&__middle {
+		top: 22px;
+		left: 20px;
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		background-color: #fff;
+		transition: all .3s ease-out;
+		transform-origin: 0 50%;
+	}
+	&::after {
+		content: "";
+		top: 29px;
+		left: 20px;
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		background-color: #fff;
+		transform-origin: 0 100%;
+		transition: transform .3s ease-out;
+	}
 }
 
 .sidebar {
-    background-color: $color-primary;
-    height: 100vh;
+	background-color: $color-primary;
+	height: 100vh;
 	width: 23vw;
 	letter-spacing: .5px;
-    @include respond(smallest) {
-        width: 26vw; //375
-    }
+	@include respond(smallest) {
+		width: 26vw; //375
+	}
 }
 
 .side-nav {
-    color: $color-grey-light-5;
-    &__item {
-        list-style: none;
-        &--active {
-            background: rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
-        }
-    }
-    &__item-logo {
-        padding: 2.3rem;
-    }
-    &__logo {
-        width: 5rem;
-        height: 5rem;
-        @include respond(tab-port) {
-            margin-bottom: 1.5rem; //900
-        }
-    }
-    &__desc {
-        text-align: right;
-    }
-    &__link {
-        text-decoration: none;
-        font-size: 1.8rem;
-        padding: 2.3rem;
-        color: $color-grey-light-5;
-    }
-    &__icon {
-        width: 3rem;
-        height: 3rem;
-        fill: $color-grey-light-5;
-        @include respond(tab-port) {
-            margin-left: 2rem; //900
-        }
-        @include respond(super-small-phone) {
-            width: 2rem;
-            height: 2rem; //400
-            margin-left: 1rem;
-        }
-        @include respond(smallest) {
-            margin-left: .7rem; //375
-        }
-    }
-    &__title {
-        color: $color-grey-light-1;
-        font-size: 1.7rem;
-    }
-    &__item--active {
-        .side-nav__icon {
-            fill: $color-active-icon;
-        }
-        span {
-            color: $color-grey-light-1;
-        }
-    }
+	color: $color-grey-light-5;
+	&__item {
+		list-style: none;
+		&--active {
+			background: rgba(0, 0, 0, 0.15);
+			box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
+		}
+	}
+	&__item-logo {
+		padding: 2.3rem;
+	}
+	&__logo {
+		width: 5rem;
+		height: 5rem;
+		@include respond(tab-port) {
+			margin-bottom: 1.5rem; //900
+		}
+	}
+	&__desc {
+		text-align: right;
+	}
+	&__link {
+		text-decoration: none;
+		font-size: 1.8rem;
+		padding: 2.3rem;
+		color: $color-grey-light-5;
+	}
+	&__icon {
+		width: 3rem;
+		height: 3rem;
+		fill: $color-grey-light-5;
+		@include respond(tab-port) {
+			margin-left: 2rem; //900
+		}
+		@include respond(super-small-phone) {
+			width: 2rem;
+			height: 2rem; //400
+			margin-left: 1rem;
+		}
+		@include respond(smallest) {
+			margin-left: .7rem; //375
+		}
+	}
+	&__title {
+		color: $color-grey-light-1;
+		font-size: 1.7rem;
+	}
+	&__item--active {
+		.side-nav__icon {
+			fill: $color-active-icon;
+		}
+		span {
+			color: $color-grey-light-1;
+		}
+	}
 }
 
 .social-icons {
-    align-self: center;
-    &__icon {
-        width: 3rem;
-        height: 3rem;
-        fill: $color-grey-light-5;
-        margin: 2.3rem;
-    }
-    @include respond(tab-port) {
-        align-self: flex-end; //900
-    }
+	align-self: center;
+	&__icon {
+		width: 3rem;
+		height: 3rem;
+		fill: $color-grey-light-5;
+		margin: 2.3rem;
+	}
+	@include respond(tab-port) {
+		align-self: flex-end; //900
+	}
 }
 
 .content {
-    margin-left: 23vw;
-    @include respond(phone) {
-        margin-left: 0; // 650 mobile-menu
-    }
+	margin-left: 23vw;
+	@include respond(phone) {
+		margin-left: 0; // 650 mobile-menu
+	}
 }
 
 ////// INTODUCTION SECTION
 .introduction {
-    background-image: url('images/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(80%);
-    @include respond(big-desktop) {}
-    &__title,
-    &__text {
-        text-align: center;
-        color: #fff;
-        font-weight: 200;
-    }
-    &__title {
-        margin: 0 auto;
-        font-size: 5rem;
-        @include respond(tab-land-biger) {
-            font-size: 4.8rem; // 1100
-        }
-        @include respond(tab-land-smaller) {
-            font-size: 4.5rem; // 1000
-        }
-        @include respond(tab-port) {
-            font-size: 4.2rem; // 900
-        }
-        @include respond(phone) {
-            font-size: 3.8rem; // 650
-        }
-    }
-    &__text {
-        font-size: 2.3rem;
-        line-height: 4rem;
-    }
+	background-image: url('images/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	filter: brightness(80%);
+	@include respond(big-desktop) {}
+	&__title,
+	&__text {
+		text-align: center;
+		color: #fff;
+		font-weight: 200;
+	}
+	&__title {
+		margin: 0 auto;
+		font-size: 5rem;
+		@include respond(tab-land-biger) {
+			font-size: 4.8rem; // 1100
+		}
+		@include respond(tab-land-smaller) {
+			font-size: 4.5rem; // 1000
+		}
+		@include respond(tab-port) {
+			font-size: 4.2rem; // 900
+		}
+		@include respond(phone) {
+			font-size: 3.8rem; // 650
+		}
+	}
+	&__text {
+		font-size: 2.3rem;
+		line-height: 4rem;
+	}
 }
 
 /////// ABOUT SECTION
 .about {
-    background-color: $color-grey-light-3;
-    color: $color-grey-light-5;
-    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
-    ul {
-        list-style: none;
-    }
-    &__header {
-        &__title {
-            font-size: 4.5rem;
-            font-weight: 300;
-            color: $color-grey-light-5;
-            padding: 5rem 0 1rem 0;
-            text-align: center;
-            @include respond(tab-land-biger) {
-                padding-top: 4rem; // 1100
-                font-size: 4.2rem;
-            }
-            @include respond(tab-land-smaller) {
-                font-size: 4rem; // 1000
-            }
-            @include respond(phone) {
-                font-size: 3.8rem; // 650
-            }
-        }
-    }
-    &__objective,
-    &__edu,
-    &__exp,
-    &__skills,
-    &__courses {
-        font-size: 1.5rem;
-        margin: 3rem;
-        @include respond(phone) {
-            margin: 2.5rem 3rem; // 650
-        }
-    }
-    &__objective {
-        font-size: 1.5rem;
-        margin: 2rem 3rem 0 3rem;
-        padding-bottom: 3rem;
-    }
-    &__edu__title,
-    &__exp__title,
-    &__skills__title,
-    &__courses__title,
-    &__objective__title {
-        align-items: center;
-        font-size: 1.6rem;
-        &::before,
-        &::after {
-            background-color: currentColor;
-        }
-    }
-    &__edu__icon,
-    &__exp__icon,
-    &__skills__icon,
-    &__courses__icon,
-    &__objective__icon {
-        width: 2rem;
-        height: 2rem;
-        fill: $color-brown-dark-1;
-        margin-right: .8rem;
-        transform: translateY(.3rem);
-    }
-    &__skills__item span {
-        font-weight: 700;
-    }
-    &__courses__item span {
-        font-style: italic;
-    }
-    &__pictures {
-        padding: 3rem;
-    }
+	background-color: $color-grey-light-3;
+	color: $color-grey-light-5;
+	box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+	ul {
+		list-style: none;
+	}
+	&__header {
+		&__title {
+			font-size: 4.5rem;
+			font-weight: 300;
+			color: $color-grey-light-5;
+			padding: 5rem 0 1rem 0;
+			text-align: center;
+			@include respond(tab-land-biger) {
+				padding-top: 4rem; // 1100
+				font-size: 4.2rem;
+			}
+			@include respond(tab-land-smaller) {
+				font-size: 4rem; // 1000
+			}
+			@include respond(phone) {
+				font-size: 3.8rem; // 650
+			}
+		}
+	}
+	&__objective,
+	&__edu,
+	&__exp,
+	&__skills,
+	&__courses {
+		font-size: 1.5rem;
+		margin: 3rem;
+	}
+	&__objective {
+		font-size: 1.5rem;
+		margin: 2rem 3rem 0 3rem;
+		padding-bottom: 3rem;
+	}
+	&__edu__title,
+	&__exp__title,
+	&__skills__title,
+	&__courses__title,
+	&__objective__title {
+		align-items: center;
+		font-size: 1.6rem;
+		&::before,
+		&::after {
+			background-color: currentColor;
+		}
+	}
+	&__edu__icon,
+	&__exp__icon,
+	&__skills__icon,
+	&__courses__icon,
+	&__objective__icon {
+		width: 2rem;
+		height: 2rem;
+		fill: $color-brown-dark-1;
+		margin-right: .8rem;
+		transform: translateY(.3rem);
+	}
+	&__skills__item span {
+		font-weight: 700;
+	}
+	&__courses__item span {
+		font-style: italic;
+	}
+	&__pictures {
+		padding: 3rem;
+	}
 }
 
 ////////// PORTFOLIO SECTION
 .portfolio {
-    background-color: $color-grey-light-4;
-    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
-    padding: 0 3rem 7rem 3rem;
-    @include respond(big-desktop) {
-        padding: 0 3rem 10rem 3rem; // 1400
-    }
-    @include respond(tab-port) {
-        padding-bottom: 5rem; // 900
-    }
-    @include respond(phone) {
-        padding-bottom: 3.5rem; // 650
-    }
-    &__header {
-        &__title {
-            font-size: 4.5rem;
-            font-weight: 300;
-            color: $color-grey-light-5;
-            padding: 5rem 0 1rem 0;
-            text-align: center;
-            @include respond(tab-land-biger) {
-                padding-top: 4rem; // 1100
-                font-size: 4.2rem;
-            }
-            @include respond(tab-land-smaller) {
-                font-size: 4rem; // 1000
-            }
-            @include respond(phone) {
-                font-size: 3.8rem; // 650
-            }
-        }
-        &__text {
-            font-size: 2.5rem;
-            color: $color-grey-light-5;
-            text-align: center;
-            margin-bottom: 2.5rem;
-            @include respond(tab-port) {
-                font-size: 2.2rem; // 900
-            }
-            @include respond(phone) {
-                font-size: 2rem; // 650
-            }
-        }
-        &__icon {
-            width: 3rem;
-            height: 3rem;
-            fill: $color-grey-light-5;
-            transform: translateY(.7rem);
-        }
-    }
-    &__cards {
-        &__item {
-            transition: all .2s;
-            &:hover {
-                transform: translateY(-1.2rem) scale(1.03);
-            }
-        }
-        &__img,
-        &__title {
-            box-shadow: .7rem .7rem .6rem 0 rgba(0, 0, 0, 0.05);
-        }
-        &__title {
-            display: block;
-            background-color: #ffffff;
-            padding: 1.5rem;
-            font-size: 2rem;
-            color: $color-grey-light-5;
-            text-align: center;
-            font-weight: 400;
-        }
-    }
+	background-color: $color-grey-light-4;
+	box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+	padding: 0 3rem 7rem 3rem;
+	@include respond(big-desktop) {
+		padding: 0 3rem 10rem 3rem; // 1400
+	}
+	@include respond(tab-port) {
+		padding-bottom: 5rem; // 900
+	}
+	@include respond(phone) {
+		padding-bottom: 3.5rem; // 650
+	}
+	&__header {
+		&__title {
+			font-size: 4.5rem;
+			font-weight: 300;
+			color: $color-grey-light-5;
+			padding: 5rem 0 1rem 0;
+			text-align: center;
+			@include respond(tab-land-biger) {
+				padding-top: 4rem; // 1100
+				font-size: 4.2rem;
+			}
+			@include respond(tab-land-smaller) {
+				font-size: 4rem; // 1000
+			}
+			@include respond(phone) {
+				font-size: 3.8rem; // 650
+			}
+		}
+		&__text {
+			font-size: 2.5rem;
+			color: $color-grey-light-5;
+			text-align: center;
+			margin-bottom: 2.5rem;
+			@include respond(tab-port) {
+				font-size: 2.2rem; // 900
+			}
+			@include respond(phone) {
+				font-size: 2rem; // 650
+			}
+		}
+		&__icon {
+			width: 3rem;
+			height: 3rem;
+			fill: $color-grey-light-5;
+			transform: translateY(.7rem);
+		}
+	}
+	&__cards {
+		&__item {
+			transition: all .2s;
+			&:hover {
+				transform: translateY(-1.2rem) scale(1.03);
+			}
+		}
+		&__img,
+		&__title {
+			box-shadow: .7rem .7rem .6rem 0 rgba(0, 0, 0, 0.05);
+		}
+		&__title {
+			display: block;
+			background-color: #ffffff;
+			padding: 1.5rem;
+			font-size: 2rem;
+			color: $color-grey-light-5;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
 }
 
 ////// FOOTER
 .footer {
-    &__text {
-        background-color: $color-grey-light-2;
-        color: $color-grey-light-5;
-        font-size: 2rem;
-        padding: 4.5rem;
-        text-align: center;
-        font-weight: 300;
-        @include respond(big-desktop) {
-            padding: 6rem; // 1400
-        }
-        @include respond(tab-land-biger) {
-            padding: 3.5rem; // 1100
-        }
-        @include respond(tab-land-smaller) {
-            padding: 3rem; // 1000
-        }
-        @include respond(small-phone) {
-            padding: 2rem; // 550
-        }
-        @include respond(super-small-phone) {
-            padding: 1.5rem; // 400
-        }
-    }
+	&__text {
+		background-color: $color-grey-light-2;
+		color: $color-grey-light-5;
+		font-size: 2rem;
+		padding: 4.5rem;
+		text-align: center;
+		font-weight: 300;
+		@include respond(big-desktop) {
+			padding: 6rem; // 1400
+		}
+		@include respond(tab-land-biger) {
+			padding: 3.5rem; // 1100
+		}
+		@include respond(tab-land-smaller) {
+			padding: 3rem; // 1000
+		}
+		@include respond(small-phone) {
+			padding: 2rem; // 550
+		}
+		@include respond(super-small-phone) {
+			padding: 1.5rem; // 400
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.tooltip-inner {
+	background-color: $color-tooltip;
+	padding: 7px;
+	font-size: 13px;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+	border-right-color: $color-tooltip !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+	border-left-color: $color-tooltip !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+	border-bottom-color: $color-tooltip !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+	border-top-color: $color-tooltip !important;
 }
